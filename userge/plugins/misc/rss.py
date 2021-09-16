@@ -109,7 +109,7 @@ New Post Found
         args.update({'chat_id': chat_id})
         try:
             if "x265.10bit" in link or "1080p" in link or "2160p" in link or "Hindi" in link:
-                await asyncio.sleep(60)    
+                await asyncio.sleep(120)    
                 await send_rss_to_telegram(userge.bot, args, thumb)
             else:
                 _LOG.info(f"{link}: >>>>>>skip<<<<<<")
