@@ -210,8 +210,8 @@ async def rss_worker():
                 RSS_DICT[url] = [pub, now]
                 await RSS_COLLECTION.update_one({'url': url}, {"$set": {'published': pub}})
                 await asyncio.sleep(1)
-            await asyncio.sleep(5)
-        await asyncio.sleep(60)
+            await asyncio.sleep(3)
+        await asyncio.sleep(6)
     TASK_RUNNING = False
 
 
